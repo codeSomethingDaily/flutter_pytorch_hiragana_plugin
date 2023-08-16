@@ -4,9 +4,6 @@ A Flutter plugin to use my ml model that classify japanese hiragana.
 
 The model used for classification is MobileNetV3 Small, obtained from torchvision.models. It is fine-tuned using the ETL-7 Character Database from http://etlcdb.db.aist.go.jp/.
 
-Reference:
-Electrotechnical Laboratory, Japanese Technical Committee for Optical Character Recognition, ETL Character Database, 1973-1984.
-
 To prevent crashes in release mode when using a PyTorch-based Flutter plugin, add the following lines to (your flutter project dir)/android/app/build.gradle file:
 
 ```gradle
@@ -25,13 +22,17 @@ android{
 }
 ```
 
-## Getting Started
+## Reference:
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+```
+@misc{howard2019searching,
+      title={Searching for MobileNetV3},
+      author={Andrew Howard and Mark Sandler and Grace Chu and Liang-Chieh Chen and Bo Chen and Mingxing Tan and Weijun Wang and Yukun Zhu and Ruoming Pang and Vijay Vasudevan and Quoc V. Le and Hartwig Adam},
+      year={2019},
+      eprint={1905.02244},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Electrotechnical Laboratory, Japanese Technical Committee for Optical Character Recognition, ETL Character Database, 1973-1984.
